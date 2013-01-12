@@ -2,7 +2,9 @@
    Base
    ========================================================================== */
 
-body { }
+body {
+background: #EEEEEE;
+ }
 
 
 
@@ -85,15 +87,117 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
   }
 }
 
-
-.tema, .carousel {
+/*
+.shadow, .tema {
 	-webkit-box-shadow: 6px 8px 6px -5px black;
 	   -moz-box-shadow: 6px 8px 6px -5px black;
 	        box-shadow: 6px 8px 6px -5px black;  
 }
+*/
+/* ==========================================================================
+   Potrebno za google maps  
+   ========================================================================== */
+
+#map_canvas img { 
+  max-width: none;
+}
+
+#map_canvas label { 
+  width: auto; display:inline; 
+}
+
+
+
+/*==================================================
+ *  * Effect 3 *   * (senka dole lesvo i desno)
+   ===============================================*/
+.shadow
+{
+  position: relative;
+}
+.shadow:before, .shadow:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.shadow:after
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+} 
+
+/*==================================================
+ *  * Effect 7
+ *   * ===============================================*/
+.effect7
+{
+  	position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect7:before, .effect7:after
+{
+	content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:0;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.effect7:after
+{
+	right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+}
+
+/*==================================================
+ *  * Effect 1 (senka ispod)
+ *   * ===============================================*/
+.effect1{
+	-webkit-box-shadow: 0 10px 6px -6px #777;
+	   -moz-box-shadow: 0 10px 6px -6px #777;
+	        box-shadow: 0 10px 6px -6px #777;
+}
+
+/* ==========================================================================
+   Isprobavanje 
+   ========================================================================== */
+
 
 .podmeni {
- padding-top: 0px
+ padding-top: 0px;
 }
 
 .smestaj-manager-extras div {
@@ -104,4 +208,13 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
   width: 100px;
   float: left;
 }
+
+#podmenu {
+
+}
+
+.footer-full {
+background: #424242;
+}
+
 

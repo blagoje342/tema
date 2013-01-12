@@ -1,25 +1,13 @@
 /*
-Theme Name:         Roots
-Theme URI:          http://www.rootstheme.com/
-Description:        Roots is a starting WordPress theme made for developers that's based on HTML5 Boilerplate and Bootstrap from Twitter. <a href="https://github.com/retlehs/roots/contributors">Contribute on GitHub</a>
-Version:            6.1.0
-Author:             Ben Word
-Author URI:         http://benword.com/
+Theme Name:         Dozivi jug
+Theme URI:          http://www.southserbia.rs/
+Description:        Tema sajta Doživi jug. 
+Version:            1.0.0
+Author:             Blagoje Jovanović
+Author URI:         http://www.southserbia.rs/
 
 License:            MIT License
 License URI:        http://opensource.org/licenses/MIT
 */
 
-.carousel {
-	border: 10px solid #FFF;
-	-webkit-transform: rotate(1deg);
-	-moz-transform: rotate(1deg);
-	-ms-transform: rotate(1deg);
-	-o-transform: rotate(1deg);
-	transform: rotate(1deg);
-	filter: progid:DXImageTransform.Microsoft.Matrix( M11=0.9986295347545738, M12=-0.05233595624294383, M21=0.05233595624294383, M22=0.9986295347545738, sizingMethod='auto expand');
-	zoom: 1;
-	-webkit-box-shadow: 10px 10px 20px #002624;
-	-moz-box-shadow: 10px 10px 20px #002624;
-	box-shadow: 10px 10px 20px #002624;
-}
+

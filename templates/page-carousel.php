@@ -2,7 +2,7 @@
 
 <!--  Carousel - consult the Twitter Bootstrap docs at
       http://twitter.github.com/bootstrap/javascript.html#carousel -->
-<div id="this-carousel-id" class="carousel slide thumbnail"><!-- class of slide for animation -->
+<div id="this-carousel-id" class="carousel slide shadow"><!-- class of slide for animation -->
   <div class="carousel-inner">
     <div class="item active"><!-- class of active since it's the first item -->
       <img src="http://placehold.it/1200x480" alt="" />
