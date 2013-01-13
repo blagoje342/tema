@@ -197,7 +197,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
 
 .podmeni {
- padding-top: 0px;
+padding-top: 0px;
 }
 
 .smestaj-manager-extras div {
@@ -209,17 +209,15 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
   float: left;
 }
 
-#podmenu {
 
-}
 
 .footer-full {
 background: #424242;
 }
 
 hr {
-margin: 17px 0 18px;
-height: 0;
+margin: 0;
+height: 2px;
 clear: both;
 border: solid #ddd;
 border-width: 1px 0 0;
@@ -228,9 +226,22 @@ border-bottom: 1px solid #fff;
 }
 
 h4, h1, h2, h3 {
-text-shadow: 0 1px 1px #fff;
+text-shadow: 0 1px 1px #ddd;
 }
 
-ul#menu-podmeni{
-color: #464646;
+.podmeni{
+
+padding-bottom: 0;
+text-align: center;
+}
+
+.boja_tema {
+}
+
+#jug_mapa {
+padding: 26px;
+}
+
+.description_products {
+text-margin: 20px;
 }

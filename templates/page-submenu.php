@@ -1,4 +1,4 @@
-  
+ <div class="container" id='podmneni'> 
     <nav id="podmenu" role="navigation">
       <?php
         if (has_nav_menu('secondary_navigation')) :
@@ -6,3 +6,4 @@
         endif;
       ?>
     </nav>
+ </div>
