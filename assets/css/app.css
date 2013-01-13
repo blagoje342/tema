@@ -217,4 +217,20 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 background: #424242;
 }
 
+hr {
+margin: 17px 0 18px;
+height: 0;
+clear: both;
+border: solid #ddd;
+border-width: 1px 0 0;
+border-top: 1px solid #ddd;
+border-bottom: 1px solid #fff;
+}
 
+h4, h1, h2, h3 {
+text-shadow: 0 1px 1px #fff;
+}
+
+ul#menu-podmeni{
+color: #464646;
+}

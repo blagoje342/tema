@@ -3,7 +3,7 @@
   <?php dynamic_sidebar('sidebar-footer'); ?>
   <div class="row">
    <div class="span12">
-  <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
+  <p class="pull-right">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
    </div>
   </div>
 </footer>
