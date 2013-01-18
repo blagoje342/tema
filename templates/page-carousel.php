@@ -11,15 +11,9 @@
     </div>
     <div class="item">
       <img src="http://placehold.it/1200x400" alt="" />
-      <div class="carousel-caption">
-        <p>Caption text here</p>
-      </div>
     </div>
     <div class="item">
       <img src="http://placehold.it/1200x400" alt="" />
-      <div class="carousel-caption">
-        <p>Caption text here</p>
-      </div>
     </div>
     <div class="item">
       <img src="http://placehold.it/1200x400" alt="" />
@@ -35,3 +29,9 @@
 
 </div> <!--/.carousel--> 
 </div>
+
+<script>
+$('#this-carousel-id').carousel({
+	interval: 8000
+});
+</script>

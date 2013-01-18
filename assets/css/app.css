@@ -3,8 +3,11 @@
    ========================================================================== */
 
 body {
-background: #EEEEEE;
- }
+ background: #eee;
+ background-image:url('../../assets/img/head_img_eee.png');
+ background-repeat: repeat-x;
+
+}
 
 
 
@@ -13,7 +16,6 @@ background: #EEEEEE;
    ========================================================================== */
 
 #banner { }
-
 /* Fixed Topbar Navigation */
 body.top-navbar { padding-top: 60px; }
 body.admin-bar .navbar-fixed-top { top: 28px; }
@@ -24,7 +26,8 @@ body.admin-bar .navbar-fixed-top { top: 28px; }
    Content
    ========================================================================== */
 
-#content { }
+#content {
+ }
 
 
 
@@ -32,7 +35,9 @@ body.admin-bar .navbar-fixed-top { top: 28px; }
    Primary Content
    ========================================================================== */
 
-#main { }
+#main {
+
+ }
 
 
 
@@ -152,9 +157,9 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 .effect7
 {
   	position:relative;
-    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 0, 0, 0.1) inset;
 }
 .effect7:before, .effect7:after
 {
@@ -191,6 +196,52 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 	        box-shadow: 0 10px 6px -6px #777;
 }
 
+/*==================================================
+ *  * Effect 8
+ *   * ===============================================*/
+.effect8
+{
+  	position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;
+}
+.effect8:before, .effect8:after
+{
+	content:"";
+    position:absolute;
+    z-index:-3;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:10px;
+    bottom:10px;
+    left:0;
+    right:0;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.effect8:after
+{
+	right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+}
+
+/* ==========================================================================
+   Fade in efekat - carousel 
+   ========================================================================== */
+
+
+
+.carousel .item {-webkit-transition: opacity 3s; -moz-transition: opacity 3s; -ms-transition: opacity 3s; -o-transition: opacity 3s; transition: opacity 3s;}
+.carousel .active.left {left:0;opacity:0;z-index:2;}
+.carousel .next {left:0;opacity:1;z-index:1;}
+
 /* ==========================================================================
    Isprobavanje 
    ========================================================================== */
@@ -217,7 +268,7 @@ background: #424242;
 
 hr {
 margin: 0;
-height: 2px;
+height: 1px;
 clear: both;
 border: solid #ddd;
 border-width: 1px 0 0;
@@ -245,3 +296,60 @@ padding: 26px;
 .description_products {
 text-margin: 20px;
 }
+
+.verticalLine {
+border-left:thick solid #000;
+}
+.logo-med {
+    z-index: -2000;
+    bottom: 30px;
+    position: absolute;
+    right: -80px;
+    transform: scaleX(-1);
+}
+
+#oblak1 {
+    z-index: -2001;
+    top: 130px;
+    position: absolute;
+    right: 80px;
+}
+
+#oblak2 {
+    z-index: -2010;
+    top: 280px;
+    position: absolute;
+    left: 15%;
+}
+
+#oblak3 {
+    z-index: -2020;
+    top: 80px;
+    position: absolute;
+    right: -180px;
+}
+
+#oblak4 {
+    z-index: -2020;
+    bottom: 140;
+    position: absolute;
+    left: 2%;
+}
+#oblak6 {
+    z-index: -2020;
+    top: 15%;
+    position: absolute;
+    right: 45%;
+}
+#oblak7 {
+    z-index: -2020;
+    bottom: 140;
+    position: absolute;
+    left: 520px;
+}
+
+.naziv_teme, .gallery_group {
+ text-align: center;
+}
+
+

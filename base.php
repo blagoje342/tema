@@ -11,22 +11,33 @@
       get_template_part('templates/header');
     }
   ?>
-<!---
+
+	    <?php get_template_part('templates/oblaci'); ?>
+
+	    <?php get_template_part('templates/page', 'carousel'); ?>
+	    <?php get_template_part('templates/page', 'submenu'); ?>
+
   <div id="wrap" class="container" role="document">
     <div id="content" class="row">
-      <div id="main" class="<?php //echo roots_main_class(); ?>" role="main"> -->
-        <?php include roots_template_path(); ?>
-      </div>
+      <div id="main" class="<?php echo roots_main_class(); ?>" role="main">
+
+	   <hr>
+
+	    <?php include roots_template_path(); ?>
+
 	<?php if (roots_display_sidebar()) : ?>
+      </div>
       <aside id="sidebar" class="<?php echo roots_sidebar_class(); ?>" role="complementary">
         <?php get_template_part('templates/sidebar'); ?>
       </aside>
       <?php endif; ?>
-<!---    </div><!-- /#content -->
+    </div><!-- /#content -->
   </div><!-- /#wrap -->
--->
-
+<img src="<?php get_theme_root_uri(); ?> /wordpress/assets/logo-med.png" class="logo-med">
+<div class="footer-color">
   <?php get_template_part('templates/footer'); ?>
+</div>
+
 
 </body>
 </html>

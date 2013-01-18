@@ -1,7 +1,9 @@
+
+
 <?php if (!have_posts()) : ?>
   <div class="alert alert-block fade in">
     <a class="close" data-dismiss="alert">&times;</a>
-    <p><?php _e('Sorry, no results were found.', 'roots'); ?></p>
+    <p><?php _e('Nema rezultata po traženom kriterijumu.', 'roots'); ?></p>
   </div>
   <?php get_search_form(); ?>
 <?php endif; ?>
@@ -13,7 +15,8 @@
       <?php get_template_part('templates/entry-meta'); ?>
     </header>
     <div class="entry-summary">
-      <?php the_excerpt(); ?>
+ <?php echo get_the_post_thumbnail($page->ID, 'thumbnail'); ?>
+     <?php the_excerpt(); ?>
     </div>
     <footer>
       <?php the_tags('<ul class="entry-tags"><li>','</li><li>','</li></ul>'); ?>
@@ -25,15 +28,16 @@
   <nav id="post-nav">
     <ul class="pager">
       <?php if (get_next_posts_link()) : ?>
-        <li class="previous"><?php next_posts_link(__('&larr; Older posts', 'roots')); ?></li>
+        <li class="previous"><?php next_posts_link(__('&larr; Starije objave', 'roots')); ?></li>
       <?php else: ?>
-        <li class="previous disabled"><a><?php _e('&larr; Older posts', 'roots'); ?></a></li>
+        <li class="previous disabled"><a><?php _e('&larr; Starije objave', 'roots'); ?></a></li>
       <?php endif; ?>
       <?php if (get_previous_posts_link()) : ?>
-        <li class="next"><?php previous_posts_link(__('Newer posts &rarr;', 'roots')); ?></li>
+        <li class="next"><?php previous_posts_link(__('Nove objave &rarr;', 'roots')); ?></li>
       <?php else: ?>
-        <li class="next disabled"><a><?php _e('Newer posts &rarr;', 'roots'); ?></a></li>
+        <li class="next disabled"><a><?php _e('Nove objave &rarr;', 'roots'); ?></a></li>
       <?php endif; ?>
     </ul>
   </nav>
 <?php endif; ?>
+

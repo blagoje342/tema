@@ -1,13 +1,8 @@
 <footer id="content-info" class="container" role="contentinfo">
-  <hr>
+<hr>
   <?php dynamic_sidebar('sidebar-footer'); ?>
-  <div class="row">
-   <div class="span12">
   <p class="pull-right">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
-   </div>
-  </div>
 </footer>
-
 <?php if (GOOGLE_ANALYTICS_ID) : ?>
 <script>
   var _gaq=[['_setAccount','<?php echo GOOGLE_ANALYTICS_ID; ?>'],['_trackPageview']];

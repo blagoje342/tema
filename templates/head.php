@@ -15,7 +15,14 @@
 
   <?php wp_head(); ?>
 
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fancybox/source/jquery.fancybox.css?v=2.1.3" type="text/css" media="screen" />
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/fancybox/source/jquery.fancybox.pack.js?v=2.1.3"></script>
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/fancybox/source/lightbox.js"></script>
+
   <?php if (wp_count_posts()->publish > 0) : ?>
   <link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?> Feed" href="<?php echo home_url(); ?>/feed/">
   <?php endif; ?>
+
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/fancybox/source/lightbox.js"></script>
 </head>
