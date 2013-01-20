@@ -3,13 +3,13 @@
       http://twitter.github.com/bootstrap/javascript.html#carousel -->
 <div id="this-carousel-id" class="carousel slide shadow"><!-- class of slide for animation -->
   <div class="carousel-inner">
-    <div class="item active">
+    <div class="item">
       <img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/carousel/slika1.jpg" >
  <!--      <div class="carousel-caption">
         <p>Caption text here</p> 
       </div> -->
    </div> 
-    <div class="item">
+    <div class="item active">
       <img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/carousel/slika2.jpg" >
     </div>   
     <div class="item">
