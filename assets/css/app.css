@@ -6,7 +6,7 @@ body {
  background: #eee;
  background-image:url('../../assets/img/head_img_eee.png');
  background-repeat: repeat-x;
-
+ height: 100%;
 }
 
 
@@ -347,6 +347,48 @@ border-left:thick solid #000;
     position: absolute;
     left: 520px;
 }
+
+#pl-levo {
+    position: absolute;
+    bottom: 0px; 
+    left: 0px;
+    z-index: -1960
+}
+
+#pl-desno {
+    position: absolute;
+    bottom: 0px; 
+    right: 0px;
+    z-index: -1970
+}
+
+#plp-levo {
+    position: absolute;
+    bottom: 0px; 
+    left: 170px;
+    z-index: -1980
+}
+
+
+#plp-desno {
+    position: absolute;
+    bottom: 0px; 
+    right: 50px;
+    z-index: -1990;
+}
+
+#dolina {
+    position: absolute;
+    bottom: 0px; 
+    left: 20%;
+    z-index: -1955;
+}
+
+#holder {
+    min-height: 100%;
+    position:relative;
+}
+
 
 .naziv_teme, .gallery_group {
  text-align: center;

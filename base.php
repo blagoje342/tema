@@ -11,7 +11,7 @@
       get_template_part('templates/header');
     }
   ?>
-
+<div id="holder">
 	    <?php get_template_part('templates/oblaci'); ?>
 
 	    <?php get_template_part('templates/page', 'carousel'); ?>
@@ -33,11 +33,12 @@
       <?php endif; ?>
     </div><!-- /#content -->
   </div><!-- /#wrap -->
-<img src="<?php get_theme_root_uri(); ?> /wordpress/assets/logo-med.png" class="logo-med">
+
+     
 <div class="footer-color">
   <?php get_template_part('templates/footer'); ?>
 </div>
 
-
+</div>
 </body>
 </html>

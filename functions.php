@@ -17,4 +17,5 @@ require_once locate_template('/lib/widgets.php');         // Sidebars and widget
 require_once locate_template('/lib/scripts.php');         // Scripts and stylesheets
 require_once locate_template('/lib/smestaj-post.php');    // Smestaj custom post 
 require_once locate_template('/lib/LTO-post.php');        // LTO custom post 
+require_once locate_template('/lib/event-post.php');      // Dešavanja custom post 
 require_once locate_template('/lib/custom.php');          // Custom functions

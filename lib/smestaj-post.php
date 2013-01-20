@@ -49,10 +49,10 @@ $broj_soba= $custom["broj_soba"][0];
 ?>
 
 <style type="text/css">
-<?php include locate_template('assets/css/smestaji-manager.css'); ?>
+<?php include locate_template('assets/css/manager.css'); ?>
 </style>
 
-<div class="smestaj-manager-extras">
+<div class="manager-extras">
 
 <div><label>Domaćinstvo</label><input name="domacinstvo" value="<?php echo $domacinstvo; ?>" /></div>
 <div><label>Mesto</label><input name="mesto" value="<?php echo $mesto; ?>" /></div>

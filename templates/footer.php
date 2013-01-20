@@ -1,6 +1,8 @@
-<footer id="content-info" class="container" role="contentinfo">
+<footer id="content-info" class="container pull-right" role="contentinfo">
 <hr>
   <?php dynamic_sidebar('sidebar-footer'); ?>
+</footer>
+<footer class"row">
   <p class="pull-right">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
 </footer>
 <?php if (GOOGLE_ANALYTICS_ID) : ?>
