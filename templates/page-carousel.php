@@ -1,16 +1,16 @@
 <div class="container">
 <!--  Carousel - consult the Twitter Bootstrap docs at
       http://twitter.github.com/bootstrap/javascript.html#carousel -->
-<div id="this-carousel-id" class="carousel slide shadow"><!-- class of slide for animation -->
+<div id="this-carousel-id" class="carousel slide effect7"><!-- class of slide for animation -->
   <div class="carousel-inner">
     <div class="item">
-      <img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/carousel/slika1.jpg" >
+      <img src="<?php echo get_template_directory_uri()?>/assets/img/carousel/slika1.jpg" >
  <!--      <div class="carousel-caption">
         <p>Caption text here</p> 
       </div> -->
    </div> 
     <div class="item active">
-      <img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/carousel/slika2.jpg" >
+      <img src="<?php echo get_template_directory_uri()?>/assets/img/carousel/slika2.jpg" >
     </div>   
     <div class="item">
       <img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/carousel/slika3.jpg" >

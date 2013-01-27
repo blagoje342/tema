@@ -6,7 +6,7 @@
 
 <?php $teme_turizma = array('Priroda', 'Kulinarstvo', 'Kultura', 'Aktivnosti'); ?> 
 <?php foreach ($teme_turizma as $value) { ?> 
-        <div class="span3">
+        <div class="span3 themes">
 	   <?php if(is_front_page()) {                
 		$post = get_page_by_title($value); // assign post id
                 $queried_post = get_page($post); ?>

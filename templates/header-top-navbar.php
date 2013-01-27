@@ -9,6 +9,12 @@
       <a class="brand" href="<?php echo home_url(); ?>/">
         <?php bloginfo('name'); ?>
       </a>
+
+<form role="search" method="get" id="searchform" class="navbar-search pull-left form-search" action="<?php echo home_url('/'); ?>">
+  <label class="hide" for="s"><?php _e('Search for:', 'roots'); ?></label>
+  <input type="text" value="<?php if (is_search()) { echo get_search_query(); } ?>" name="s" id="s" class="search-query" placeholder="<?php _e('Pretraži', 'roots'); ?> <?php bloginfo('name'); ?>">
+ <!---  <input type="submit" id="searchsubmit" value="<?php _e('Search', 'roots'); ?>" class="btn"> -->
+</form>
       <nav id="nav-main" class="nav-collapse" role="navigation">
         <?php
           if (has_nav_menu('primary_navigation')) :

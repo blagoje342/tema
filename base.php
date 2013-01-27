@@ -16,12 +16,10 @@
 
 	    <?php get_template_part('templates/page', 'carousel'); ?>
 	    <?php get_template_part('templates/page', 'submenu'); ?>
-
   <div id="wrap" class="container" role="document">
     <div id="content" class="row">
       <div id="main" class="<?php echo roots_main_class(); ?>" role="main">
 
-	   <hr>
 
 	    <?php include roots_template_path(); ?>
 

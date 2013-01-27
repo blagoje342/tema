@@ -11,17 +11,17 @@
 <?php while (have_posts()) : the_post(); ?>
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header>
-      <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-      <?php get_template_part('templates/entry-meta'); ?>
+      <?php echo get_the_date('d.m.Y'); ?>
+      <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
     </header>
     <div class="entry-summary">
- <?php echo get_the_post_thumbnail($page->ID, 'thumbnail'); ?>
      <?php the_excerpt(); ?>
     </div>
     <footer>
       <?php the_tags('<ul class="entry-tags"><li>','</li><li>','</li></ul>'); ?>
     </footer>
   </article>
+  <hr>
 <?php endwhile; ?>
 
 <?php if ($wp_query->max_num_pages > 1) : ?>
@@ -33,9 +33,9 @@
         <li class="previous disabled"><a><?php _e('&larr; Starije objave', 'roots'); ?></a></li>
       <?php endif; ?>
       <?php if (get_previous_posts_link()) : ?>
-        <li class="next"><?php previous_posts_link(__('Nove objave &rarr;', 'roots')); ?></li>
+        <li class="next"><?php previous_posts_link(__('Novije objave &rarr;', 'roots')); ?></li>
       <?php else: ?>
-        <li class="next disabled"><a><?php _e('Nove objave &rarr;', 'roots'); ?></a></li>
+        <li class="next disabled"><a><?php _e('Novije objave &rarr;', 'roots'); ?></a></li>
       <?php endif; ?>
     </ul>
   </nav>

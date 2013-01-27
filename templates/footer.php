@@ -1,6 +1,11 @@
 <footer id="content-info" class="container pull-right" role="contentinfo">
 <hr>
-  <?php dynamic_sidebar('sidebar-footer'); ?>
+ <nav class="impressum">
+  <?php            if (has_nav_menu('impressum')) :
+            wp_nav_menu(array('theme_location' => 'impressum', 'menu_class' => 'nav nav-pills'));
+          endif;
+   ?>
+ </nav>
 </footer>
 <footer class"row">
   <p class="pull-right">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>

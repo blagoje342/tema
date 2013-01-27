@@ -3,8 +3,8 @@
    ========================================================================== */
 
 body {
- background: #eee;
- background-image:url('../../assets/img/head_img_eee.png');
+ background: #fff;
+ background-image:url('/wordpress/wp-content/themes/dozivi_jug/assets/img/H4.png');
  background-repeat: repeat-x;
  height: 100%;
 }
@@ -27,6 +27,7 @@ body.admin-bar .navbar-fixed-top { top: 28px; }
    ========================================================================== */
 
 #content {
+
  }
 
 
@@ -178,7 +179,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 }
 .effect7:after
 {
-	right:10px;
+    right:10px;
     left:auto;
     -webkit-transform:skew(8deg) rotate(3deg);
        -moz-transform:skew(8deg) rotate(3deg);
@@ -236,20 +237,66 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    Fade in efekat - carousel 
    ========================================================================== */
 
-
-
 .carousel .item {-webkit-transition: opacity 3s; -moz-transition: opacity 3s; -ms-transition: opacity 3s; -o-transition: opacity 3s; transition: opacity 3s;}
 .carousel .active.left {left:0;opacity:0;z-index:2;}
 .carousel .next {left:0;opacity:1;z-index:1;}
+
+/* =========== za teme ====================
+           dodavanje ispisa
+   ======================================== */
+.themes {
+ position: relative;
+ padding-bottom: 20px;
+}
+
+.teme img {
+  -webkit-border-radius: 6px; 
+  -moz-border-radius: 6px; 
+  border-radius: 6px;
+}
+.naziv_teme {
+ position: absolute;
+ right: 0;
+ bottom: 20px;
+}
+
+.naziv_teme a {
+color: #fff;
+font: 20px/45px Helvetica, Sans-Serif;
+font-weight: 300;
+padding: 6px;
+background-color: rgba(199, 66, 54, 0.9);
+}
+
+/* =========== podmeni ====================
+          sva podešavanja podmenija
+   ======================================== */
+
+#podmenu {
+background-color: rgba(242, 251, 251);
+background-color: rgba(0, 0, 0, 0.07);
+padding: 20px 0 2px 5px;
+padding-bottom: 2px;
+}
+
+
+#podmenu a {
+color: #353535;
+font-size: 1.2em;
+font-weight: 800;
+}
+
+#podmenu .active a {
+color: white;
+background-color: #08C;
+}
+
+
 
 /* ==========================================================================
    Isprobavanje 
    ========================================================================== */
 
-
-.podmeni {
-padding-top: 0px;
-}
 
 .smestaj-manager-extras div {
   margin: 10px;
@@ -282,8 +329,6 @@ text-shadow: 0 1px 1px #ddd;
 
 .podmeni{
 
-padding-bottom: 0;
-text-align: center;
 }
 
 .boja_tema {
@@ -291,10 +336,6 @@ text-align: center;
 
 #jug_mapa {
 padding: 26px;
-}
-
-.description_products {
-text-margin: 20px;
 }
 
 .verticalLine {
@@ -324,9 +365,9 @@ border-left:thick solid #000;
 
 #oblak3 {
     z-index: -2020;
-    top: 80px;
+    top: 150px;
     position: absolute;
-    right: -180px;
+    right: 86px;
 }
 
 #oblak4 {
@@ -393,5 +434,7 @@ border-left:thick solid #000;
 .naziv_teme, .gallery_group {
  text-align: center;
 }
-
-
+.impressum {
+font: 1.1em;
+font-weight: 900;
+}
