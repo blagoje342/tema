@@ -178,6 +178,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     border-radius:100px / 10px;
 }
 .effect7:after
+
 {
     right:10px;
     left:auto;
@@ -187,6 +188,44 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
          -o-transform:skew(8deg) rotate(3deg);
             transform:skew(8deg) rotate(3deg);
 }
+
+
+/*==================================================
+ *  * Effect 6
+ *   * ===============================================*/
+.effect6
+{
+  	position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect6:before, .effect6:after
+{
+	content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:50%;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.effect6:after, .effect6:before
+{
+	right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+}
+
 
 /*==================================================
  *  * Effect 1 (senka ispod)
@@ -437,4 +476,88 @@ border-left:thick solid #000;
 .impressum {
 font: 1.1em;
 font-weight: 900;
+}
+
+.gallery_group {
+background-color: #fff;
+margin-top: 20px;
+padding: 12px;
+}
+#galerija {
+ -webkit-transform: rotate(-2deg);
+ -moz-transform: rotate(-2deg);
+}
+
+#galerija span:nth-of-type(even) {
+ -webkit-transform: rotate(2deg);
+ -moz-transform: rotate(2deg);
+}
+
+#galerija span:nth-of-type(3) {
+ -webkit-transform: rotate(6deg);
+ -moz-transform: rotate(6deg);
+ position: relative;
+ top: 5px;
+}
+
+
+#galerija span:nth-of-type(4n) {
+ -webkit-transform: none;
+ -moz-transform: none;
+ position: relative;
+ top: 15px;
+}
+
+
+#galerija span:nth-of-type(5n) {
+-webkit-transform: rotate(5deg);
+-moz-transform: rotate(5deg);
+position: relative;
+right: 5px;
+}
+
+
+#galerija span:nth-of-type(8n) {
+position: relative;
+top: 8px;
+right: 5px;
+}
+
+
+
+#galerija span:nth-of-type(11n) {
+position: relative;
+top: 3px;
+left: -5px;
+}
+
+
+#nav-main {
+font-size: 1.1em;
+font-weight: 700;
+}
+
+#novosti_naslovna {
+ z-index: 4000;
+}
+
+#mapa h3, #desavanje h3, #novosti_naslovna h3 {
+text-align: center;
+
+}
+
+#mapa {
+margin-top: 10px;
+}
+.datum {
+font-family: 'La Belle Aurore', cursive;
+color: green;
+font-size: 1.4em;
+}
+
+#novosti_naslovna .datum {
+}
+
+#desavanje header a, #novosti_naslovna header a, #desavanje article div p a {
+font-weight: 600;
 }

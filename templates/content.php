@@ -11,7 +11,9 @@
 <?php while (have_posts()) : the_post(); ?>
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header>
+     <span class='pull-right'>
       <?php echo get_the_date('d.m.Y'); ?>
+     </span>
       <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
     </header>
     <div class="entry-summary">
@@ -41,3 +43,10 @@
   </nav>
 <?php endif; ?>
 
+	<?php if (roots_display_sidebar()) : ?>
+      </div>
+      <aside id="sidebar" class="<?php echo roots_sidebar_class(); ?>" role="complementary">
+        <?php get_template_part('templates/sidebar'); ?>
+      </aside>
+      <?php endif; ?>
+ 

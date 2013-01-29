@@ -23,13 +23,7 @@
 
 	    <?php include roots_template_path(); ?>
 
-	<?php if (roots_display_sidebar()) : ?>
-      </div>
-      <aside id="sidebar" class="<?php echo roots_sidebar_class(); ?>" role="complementary">
-        <?php get_template_part('templates/sidebar'); ?>
-      </aside>
-      <?php endif; ?>
-    </div><!-- /#content -->
+   </div><!-- /#content -->
   </div><!-- /#wrap -->
 
      
