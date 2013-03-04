@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
       </a>
       <a class="brand" href="<?php echo home_url(); ?>/">
-        <?php bloginfo('name'); ?>
+	<img src='assets/brand.png'>
       </a>
 
 <form role="search" method="get" id="searchform" class="navbar-search pull-left form-search" action="<?php echo home_url('/'); ?>">

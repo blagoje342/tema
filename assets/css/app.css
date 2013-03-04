@@ -1,3 +1,7 @@
+@import url("shadows.css");
+@import url("pozadina.css");
+@import url("galerija.css");
+
 /* ==========================================================================
    Base
    ========================================================================== */
@@ -27,8 +31,8 @@ body.admin-bar .navbar-fixed-top { top: 28px; }
    ========================================================================== */
 
 #content {
+}
 
- }
 
 
 
@@ -114,208 +118,19 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
 
 
-/*==================================================
- *  * Effect 3 *   * (senka dole lesvo i desno)
-   ===============================================*/
-.shadow
-{
-  position: relative;
-}
-.shadow:before, .shadow:after
-{
-  z-index: -1;
-  position: absolute;
-  content: "";
-  bottom: 15px;
-  left: 10px;
-  width: 50%;
-  top: 80%;
-  max-width:300px;
-  background: #777;
-  -webkit-box-shadow: 0 15px 10px #777;
-  -moz-box-shadow: 0 15px 10px #777;
-  box-shadow: 0 15px 10px #777;
-  -webkit-transform: rotate(-3deg);
-  -moz-transform: rotate(-3deg);
-  -o-transform: rotate(-3deg);
-  -ms-transform: rotate(-3deg);
-  transform: rotate(-3deg);
-}
-.shadow:after
-{
-  -webkit-transform: rotate(3deg);
-  -moz-transform: rotate(3deg);
-  -o-transform: rotate(3deg);
-  -ms-transform: rotate(3deg);
-  transform: rotate(3deg);
-  right: 10px;
-  left: auto;
-} 
-
-/*==================================================
- *  * Effect 7
- *   * ===============================================*/
-.effect7
-{
-  	position:relative;
-    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 0, 0, 0.1) inset;
-       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 0, 0, 0.1) inset;
-            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 0, 0, 0.1) inset;
-}
-.effect7:before, .effect7:after
-{
-	content:"";
-    position:absolute;
-    z-index:-1;
-    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
-    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
-    box-shadow:0 0 20px rgba(0,0,0,0.8);
-    top:0;
-    bottom:0;
-    left:10px;
-    right:10px;
-    -moz-border-radius:100px / 10px;
-    border-radius:100px / 10px;
-}
-.effect7:after
-
-{
-    right:10px;
-    left:auto;
-    -webkit-transform:skew(8deg) rotate(3deg);
-       -moz-transform:skew(8deg) rotate(3deg);
-        -ms-transform:skew(8deg) rotate(3deg);
-         -o-transform:skew(8deg) rotate(3deg);
-            transform:skew(8deg) rotate(3deg);
-}
-
-
-/*==================================================
- *  * Effect 6
- *   * ===============================================*/
-.effect6
-{
-  	position:relative;
-    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-}
-.effect6:before, .effect6:after
-{
-	content:"";
-    position:absolute;
-    z-index:-1;
-    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
-    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
-    box-shadow:0 0 20px rgba(0,0,0,0.8);
-    top:50%;
-    bottom:0;
-    left:10px;
-    right:10px;
-    -moz-border-radius:100px / 10px;
-    border-radius:100px / 10px;
-}
-.effect6:after, .effect6:before
-{
-	right:10px;
-    left:auto;
-    -webkit-transform:skew(8deg) rotate(3deg);
-       -moz-transform:skew(8deg) rotate(3deg);
-        -ms-transform:skew(8deg) rotate(3deg);
-         -o-transform:skew(8deg) rotate(3deg);
-            transform:skew(8deg) rotate(3deg);
-}
-
-
-/*==================================================
- *  * Effect 1 (senka ispod)
- *   * ===============================================*/
-.effect1{
-	-webkit-box-shadow: 0 10px 6px -6px #777;
-	   -moz-box-shadow: 0 10px 6px -6px #777;
-	        box-shadow: 0 10px 6px -6px #777;
-}
-
-/*==================================================
- *  * Effect 8
- *   * ===============================================*/
-.effect8
-{
-  	position:relative;
-    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;
-       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;
-            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;
-}
-.effect8:before, .effect8:after
-{
-	content:"";
-    position:absolute;
-    z-index:-3;
-    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
-    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
-    box-shadow:0 0 20px rgba(0,0,0,0.8);
-    top:10px;
-    bottom:10px;
-    left:0;
-    right:0;
-    -moz-border-radius:100px / 10px;
-    border-radius:100px / 10px;
-}
-.effect8:after
-{
-	right:10px;
-    left:auto;
-    -webkit-transform:skew(8deg) rotate(3deg);
-       -moz-transform:skew(8deg) rotate(3deg);
-        -ms-transform:skew(8deg) rotate(3deg);
-         -o-transform:skew(8deg) rotate(3deg);
-            transform:skew(8deg) rotate(3deg);
-}
-
-/* ==========================================================================
-   Fade in efekat - carousel 
-   ========================================================================== */
-
-.carousel .item {-webkit-transition: opacity 3s; -moz-transition: opacity 3s; -ms-transition: opacity 3s; -o-transition: opacity 3s; transition: opacity 3s;}
-.carousel .active.left {left:0;opacity:0;z-index:2;}
-.carousel .next {left:0;opacity:1;z-index:1;}
-
-/* =========== za teme ====================
-           dodavanje ispisa
-   ======================================== */
-.themes {
- position: relative;
- padding-bottom: 20px;
-}
-
-.teme img {
-  -webkit-border-radius: 6px; 
-  -moz-border-radius: 6px; 
-  border-radius: 6px;
-}
-.naziv_teme {
- position: absolute;
- right: 0;
- bottom: 20px;
-}
-
-.naziv_teme a {
-color: #fff;
-font: 20px/45px Helvetica, Sans-Serif;
-font-weight: 300;
-padding: 6px;
-background-color: rgba(199, 66, 54, 0.9);
-}
-
 /* =========== podmeni ====================
           sva podešavanja podmenija
    ======================================== */
 
 #podmenu {
 background-color: rgba(242, 251, 251);
-background-color: rgba(0, 0, 0, 0.07);
-padding: 20px 0 2px 5px;
-padding-bottom: 2px;
+background-color: rgba(0, 0, 0, 0.1);
+padding: 3px 0 -6px;
+  text-align: center;
+  -webkit-border-radius: 3px; 
+  -moz-border-radius: 3px; 
+  border-radius: 3px;
+
 }
 
 
@@ -333,9 +148,16 @@ background-color: #08C;
 
 
 /* ==========================================================================
+   potrebno za prikaz pozadine 
+   ========================================================================== */
+#holder {
+    min-height: 100%;
+    position:relative;
+}
+
+/* ==========================================================================
    Isprobavanje 
    ========================================================================== */
-
 
 .smestaj-manager-extras div {
   margin: 10px;
@@ -346,33 +168,6 @@ background-color: #08C;
   float: left;
 }
 
-
-
-.footer-full {
-background: #424242;
-}
-
-hr {
-margin: 0;
-height: 1px;
-clear: both;
-border: solid #ddd;
-border-width: 1px 0 0;
-border-top: 1px solid #ddd;
-border-bottom: 1px solid #fff;
-}
-
-h4, h1, h2, h3 {
-text-shadow: 0 1px 1px #ddd;
-}
-
-.podmeni{
-
-}
-
-.boja_tema {
-}
-
 #jug_mapa {
 padding: 26px;
 }
@@ -380,155 +175,12 @@ padding: 26px;
 .verticalLine {
 border-left:thick solid #000;
 }
-.logo-med {
-    z-index: -2000;
-    bottom: 30px;
-    position: absolute;
-    right: -80px;
-    transform: scaleX(-1);
-}
-
-#oblak1 {
-    z-index: -2001;
-    top: 130px;
-    position: absolute;
-    right: 80px;
-}
-
-#oblak2 {
-    z-index: -2010;
-    top: 280px;
-    position: absolute;
-    left: 15%;
-}
-
-#oblak3 {
-    z-index: -2020;
-    top: 150px;
-    position: absolute;
-    right: 86px;
-}
-
-#oblak4 {
-    z-index: -2020;
-    bottom: 140;
-    position: absolute;
-    left: 2%;
-}
-#oblak6 {
-    z-index: -2020;
-    top: 15%;
-    position: absolute;
-    right: 45%;
-}
-#oblak7 {
-    z-index: -2020;
-    bottom: 140;
-    position: absolute;
-    left: 520px;
-}
-
-#pl-levo {
-    position: absolute;
-    bottom: 0px; 
-    left: 0px;
-    z-index: -1960
-}
-
-#pl-desno {
-    position: absolute;
-    bottom: 0px; 
-    right: 0px;
-    z-index: -1970
-}
-
-#plp-levo {
-    position: absolute;
-    bottom: 0px; 
-    left: 170px;
-    z-index: -1980
-}
-
-
-#plp-desno {
-    position: absolute;
-    bottom: 0px; 
-    right: 50px;
-    z-index: -1990;
-}
-
-#dolina {
-    position: absolute;
-    bottom: 0px; 
-    left: 20%;
-    z-index: -1955;
-}
-
-#holder {
-    min-height: 100%;
-    position:relative;
-}
-
-
 .naziv_teme, .gallery_group {
  text-align: center;
 }
 .impressum {
 font: 1.1em;
 font-weight: 900;
-}
-
-.gallery_group {
-background-color: #fff;
-margin-top: 20px;
-padding: 12px;
-}
-#galerija {
- -webkit-transform: rotate(-2deg);
- -moz-transform: rotate(-2deg);
-}
-
-#galerija span:nth-of-type(even) {
- -webkit-transform: rotate(2deg);
- -moz-transform: rotate(2deg);
-}
-
-#galerija span:nth-of-type(3) {
- -webkit-transform: rotate(6deg);
- -moz-transform: rotate(6deg);
- position: relative;
- top: 5px;
-}
-
-
-#galerija span:nth-of-type(4n) {
- -webkit-transform: none;
- -moz-transform: none;
- position: relative;
- top: 15px;
-}
-
-
-#galerija span:nth-of-type(5n) {
--webkit-transform: rotate(5deg);
--moz-transform: rotate(5deg);
-position: relative;
-right: 5px;
-}
-
-
-#galerija span:nth-of-type(8n) {
-position: relative;
-top: 8px;
-right: 5px;
-}
-
-
-
-#galerija span:nth-of-type(11n) {
-position: relative;
-top: 3px;
-left: -5px;
 }
 
 
@@ -538,12 +190,19 @@ font-weight: 700;
 }
 
 #novosti_naslovna {
- z-index: 4000;
+ margin-top: 3em; 
 }
 
-#mapa h3, #desavanje h3, #novosti_naslovna h3 {
+#desavanje {
+ margin-top: 3em;
+}
+#mapa h3 {
 text-align: center;
 
+}
+
+#desavanje h3, #novosti_naslovna h3 {
+text-align: center;
 }
 
 #mapa {
@@ -551,13 +210,17 @@ margin-top: 10px;
 }
 .datum {
 font-family: 'La Belle Aurore', cursive;
-color: green;
+color: #679a00;
 font-size: 1.4em;
 }
 
-#novosti_naslovna .datum {
+#novosti_naslovna p {
+ font-weight: 100;
+ color: #555;
 }
 
 #desavanje header a, #novosti_naslovna header a, #desavanje article div p a {
 font-weight: 600;
 }
+
+

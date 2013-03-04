@@ -11,25 +11,22 @@
       get_template_part('templates/header');
     }
   ?>
-<div id="holder">
-	    <?php get_template_part('templates/oblaci'); ?>
 
+<div id="holder">
+ <div id="wrap" class="container" role="document">
 	    <?php get_template_part('templates/page', 'carousel'); ?>
 	    <?php get_template_part('templates/page', 'submenu'); ?>
-  <div id="wrap" class="container" role="document">
     <div id="content" class="row">
       <div id="main" class="<?php echo roots_main_class(); ?>" role="main">
 
-
+	    <?php get_template_part('templates/oblaci'); ?>
 	    <?php include roots_template_path(); ?>
 
    </div><!-- /#content -->
   </div><!-- /#wrap -->
 
-     
-<div class="footer-color">
   <?php get_template_part('templates/footer'); ?>
-</div>
+     
 
 </div>
 </body>

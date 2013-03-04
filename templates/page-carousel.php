@@ -1,7 +1,7 @@
 <div class="container">
 <!--  Carousel - consult the Twitter Bootstrap docs at
       http://twitter.github.com/bootstrap/javascript.html#carousel -->
-<div id="this-carousel-id" class="carousel slide effect7"><!-- class of slide for animation -->
+<div id="this-carousel-id" class="carousel slide effect8"><!-- class of slide for animation -->
   <div class="carousel-inner">
     <div class="item">
       <img src="<?php echo get_template_directory_uri()?>/assets/img/carousel/slika1.jpg" >
@@ -35,11 +35,15 @@
     <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
     <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a> -->
 
-</div> <!--/.carousel--> 
+
+  </div> <!--/.carousel--> 
 </div>
+</div>
+
 
 <script>
 $('#this-carousel-id').carousel({
 	interval: 8000
 });
 </script>
+
