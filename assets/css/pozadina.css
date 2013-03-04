@@ -1,0 +1,86 @@
+.logo-med {
+    z-index: -2000;
+    bottom: 30px;
+    position: absolute;
+    right: -80px;
+    transform: scaleX(-1);
+}
+
+#oblak1 {
+    z-index: -2001;
+    top: 130px;
+    position: absolute;
+    right: 80px;
+}
+
+#oblak2 {
+    z-index: -2010;
+    top: 280px;
+    position: absolute;
+    left: 15%;
+}
+
+#oblak3 {
+    z-index: -2020;
+    top: 150px;
+    position: absolute;
+    right: 86px;
+}
+
+#oblak4 {
+    z-index: -2020;
+    bottom: 140;
+    position: absolute;
+    left: 2%;
+}
+#oblak6 {
+    z-index: -2020;
+    top: 15%;
+    position: absolute;
+    right: 45%;
+}
+#oblak7 {
+    z-index: -2020;
+    bottom: 140;
+    position: absolute;
+    left: 520px;
+}
+
+#pl-levo {
+    position: absolute;
+    bottom: 0px; 
+    left: 0px;
+    z-index: -1960
+}
+
+#pl-desno {
+    position: absolute;
+    bottom: 0px; 
+    right: 0px;
+    z-index: -1970
+}
+
+#plp-levo {
+    position: absolute;
+    bottom: 0px; 
+    left: 170px;
+    z-index: -1980
+}
+
+
+#plp-desno {
+    position: absolute;
+    bottom: 0px; 
+    right: 50px;
+    z-index: -1990;
+}
+
+#dolina {
+    position: absolute;
+    bottom: 0px; 
+    left: 20%;
+    z-index: -1955;
+}
+
+
+

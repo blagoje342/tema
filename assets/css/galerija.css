@@ -1,0 +1,54 @@
+.gallery_group {
+background-color: #fff;
+margin-top: 20px;
+padding: 12px;
+}
+#galerija {
+ -webkit-transform: rotate(-2deg);
+ -moz-transform: rotate(-2deg);
+}
+
+#galerija span:nth-of-type(even) {
+ -webkit-transform: rotate(2deg);
+ -moz-transform: rotate(2deg);
+}
+
+#galerija span:nth-of-type(3) {
+ -webkit-transform: rotate(6deg);
+ -moz-transform: rotate(6deg);
+ position: relative;
+ top: 5px;
+}
+
+
+#galerija span:nth-of-type(4n) {
+ -webkit-transform: none;
+ -moz-transform: none;
+ position: relative;
+ top: 15px;
+}
+
+
+#galerija span:nth-of-type(5n) {
+-webkit-transform: rotate(5deg);
+-moz-transform: rotate(5deg);
+position: relative;
+right: 5px;
+}
+
+
+#galerija span:nth-of-type(8n) {
+position: relative;
+top: 8px;
+right: 5px;
+}
+
+
+
+#galerija span:nth-of-type(11n) {
+position: relative;
+top: 3px;
+left: -5px;
+}
+
+
