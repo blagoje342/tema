@@ -16,7 +16,7 @@
 	    <div class="info span12">
 	     <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 		<div class="row">
-		<div class="span3 effect1">
+		<div class="span3 thumbnail">
 	           <?php echo get_the_post_thumbnail($page->ID, 'medium'); ?>
 		</div>
 
@@ -26,7 +26,7 @@
 	     </p>
 
 	        </div> 
-		    <dl class="dl-horizontal span5">                                                                       
+		    <dl class="dl-horizontal span4">                                                                       
 		      <dt>Domaćin</dt>
 		      <dd><?php print $domacinstvo ?><dd>
 		      <dt>Mesto</dt>
