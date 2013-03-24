@@ -1,4 +1,4 @@
-<div class="btn-group offset1">
+<div class="btn-group">
 </br>
 <a href="#events_btn_m" role="button" class="btn" data-toggle="modal">U toku meseca</a> 
 	<!-- Modal -->

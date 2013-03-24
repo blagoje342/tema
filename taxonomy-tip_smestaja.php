@@ -1,6 +1,3 @@
-
-
-
 	   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	    <?php
 	     $custom = get_post_custom($post->ID);
@@ -49,8 +46,7 @@
 	 </div>
 	</div>
  <br/>
-<hr>
-
+<hr/>
 	   <?php endwhile; else: ?>
 	    <p><?php _e('Nema smeštaja koji tražite'); ?></p>
 	 <?php endif; ?>

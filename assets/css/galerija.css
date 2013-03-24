@@ -1,19 +1,20 @@
 .gallery_group {
 background-color: #fff;
-margin-top: 20px;
+margin: 20px -5px -5px -5px;
 padding: 12px;
 }
-#galerija {
+
+.galerija {
  -webkit-transform: rotate(-2deg);
  -moz-transform: rotate(-2deg);
 }
 
-#galerija span:nth-of-type(even) {
+.galerija span:nth-of-type(even) {
  -webkit-transform: rotate(2deg);
  -moz-transform: rotate(2deg);
 }
 
-#galerija span:nth-of-type(3) {
+.galerija span:nth-of-type(3) {
  -webkit-transform: rotate(6deg);
  -moz-transform: rotate(6deg);
  position: relative;
@@ -21,7 +22,7 @@ padding: 12px;
 }
 
 
-#galerija span:nth-of-type(4n) {
+.galerija span:nth-of-type(4n) {
  -webkit-transform: none;
  -moz-transform: none;
  position: relative;
@@ -29,7 +30,7 @@ padding: 12px;
 }
 
 
-#galerija span:nth-of-type(5n) {
+.galerija span:nth-of-type(5n) {
 -webkit-transform: rotate(5deg);
 -moz-transform: rotate(5deg);
 position: relative;
@@ -37,7 +38,7 @@ right: 5px;
 }
 
 
-#galerija span:nth-of-type(8n) {
+.galerija span:nth-of-type(8n) {
 position: relative;
 top: 8px;
 right: 5px;
@@ -45,7 +46,7 @@ right: 5px;
 
 
 
-#galerija span:nth-of-type(11n) {
+.galerija span:nth-of-type(11n) {
 position: relative;
 top: 3px;
 left: -5px;

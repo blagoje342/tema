@@ -2,14 +2,14 @@
 
 <div class="alert alert-block fade in">
   <a class="close" data-dismiss="alert">&times;</a>
-  <p><?php _e('The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.', 'roots'); ?></p>
+  <p><?php _e('Strana koju tražite ne postoji. Možda je izbrisana, pomerena ili je trenutno nedostupna.', 'roots'); ?></p>
 </div>
 
 <p><?php _e('Please try the following:', 'roots'); ?></p>
 <ul>
-  <li><?php _e('Check your spelling', 'roots'); ?></li>
-  <li><?php printf(__('Return to the <a href="%s">home page</a>', 'roots'), home_url()); ?></li>
-  <li><?php _e('Click the <a href="javascript:history.back()">Back</a> button', 'roots'); ?></li>
+  <li><?php _e('Proverite da nema slovnih grešaka.', 'roots'); ?></li>
+  <li><?php printf(__('Vratite se na <a href="%s">početnu stranu</a>', 'roots'), home_url()); ?></li>
+  <li><?php _e('Kliknite na <a href="javascript:history.back()">Nazad</a> dugme', 'roots'); ?></li>
 </ul>
 
 <?php get_search_form(); ?>

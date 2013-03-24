@@ -1,5 +1,12 @@
 <?php
 
+// 0. Base
+
+add_action('admin_init', 'css_za_events');
+
+function css_za_events() {
+	wp_enqueue_style('css_za_events', get_bloginfo('template_directory') . '/assets/css/manager.css');
+}
 
 // Kreiranje custom posta za smešta
 
@@ -10,16 +17,16 @@ function event_post() {
 // Argumenti potrebni za lto post
 
 $args = array(
-'label' => __('Dešavanja'),
-'singular_label' => __('Dešavanja'),
-'public' => true,
-'show_ui' => true,
-'capability_type' => 'post',
-'hierarchical' => true,
-'has_archive' => true, 
-'show_in_nav_menus'  => true,
-'supports' => array('title', 'editor', 'thumbnail'),
-'rewrite' => array('slug' => 'dogadjaji', 'with_front' => false), );
+  'label' => __('Dešavanja'),
+  'singular_label' => __('Dešavanje'),
+  'public' => true,
+  'show_ui' => true,
+  'capability_type' => 'post',
+  'hierarchical' => true,
+  'has_archive' => true, 
+  'show_in_nav_menus'  => true,
+  'supports' => array('title', 'excerpt', 'editor', 'thumbnail'),
+  'rewrite' => array('slug' => 'dogadjaji', 'with_front' => false), );
 //Register type and taxonomy category
 register_post_type('event', $args);
 }
@@ -37,34 +44,43 @@ add_meta_box("event_meta", "dogadjaji osnovni podaci",
 }
 
 function event_manager_meta_options() {
-global $post;
-if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE)
-return $post_id;
+  global $post;
+  if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE)
+  return $post->ID;
 
-$custom = get_post_custom($post->ID);
-$naziv = $custom["naziv"][0];
-$mesto = $custom["mesto"][0];
-$pocetak = $custom["pocetak"][0];
-$zavrsetak = $custom["zavrsetak"][0];
-$broj_telefona = $custom["broj_telefona"][0];
-$fax= $custom["fax"][0];
-$mejl= $custom["mejl"][0];
+  $dogadjaji = get_post_custom($post->ID);
+  $naziv = $dogadjaji["naziv"][0];
+  $mesto = $dogadjaji["mesto"][0];
+  $pocetak = $dogadjaji["pocetak"][0];
+  $zavrsetak = $dogadjaji["zavrsetak"][0];
+  $broj_telefona = $dogadjaji["broj_telefona"][0];
+  $fax= $dogadjaji["fax"][0];
+  $mejl= $dogadjaji["mejl"][0];
+
+
+  $date_format = get_option('date_format'); // Not required in my code
+
+  $clean_pocetak = date($date_format, $pocetak);
+  $clean_zavrsetak= date($date_format, $zavrsetak);
+
 ?>
 
-<style type="text/css">
-<?php include locate_template('assets/css/manager.css'); ?>
-</style>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" href="/resources/demos/style.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#pocetak, #zavrsetak, #dp6' ).datepicker({ dateFormat: "dd.mm.yy", firstDay:1 });
+  });  
+</script>
 
 <div class="manager-extras">
-<div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-  <input id="date" class="span2" size="16" type="text" value="12-02-2012">
-  <span class="add-on"><i class="icon-th"></i></span>
-</div>
-
 <div><label>Naziv dogadjaja</label><input name="naziv" value="<?php echo $naziv; ?>" /></div>
 <div><label>Mesto održavanja</label><input name="mesto" value="<?php echo $mesto; ?>" /></div>
-<div><label>Datum početka</label><input name="pocetak" value="<?php echo $pocetak; ?>" /></div>
-<div><label>Datum zavrsetka</label><input name="zavrsetak" value="<?php echo $zavrsetak; ?>" /></div>
+<div><label>Datum početka</label><input id="pocetak" name="pocetak" data-date-format="dd.mm.yyyy" value="<?php echo $clean_pocetak; ?>" /></div>
+<div><label>Datum zavrsetka</label><input id="zavrsetak" name="zavrsetak" value="<?php echo $clean_zavrsetak; ?>" /></div>
 <div><label>Broj telefona</label><input name="broj_telefona" value="<?php echo $broj_telefona; ?>" /></div>
 <div><label>Fax</label><input name="Fax" value="<?php echo $fax; ?>" /></div>
 <div><label>Mejl</label><input name="Mejl" value="<?php echo $mejl; ?>" /></div>
@@ -82,12 +98,15 @@ function event_manager_save_extras() {
 
  if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ) {
     //if you remove this line sky will fall on your head.
-      return $post_id;
+      return $post->ID;
   }else{
     update_post_meta($post->ID, "naziv", $_POST["naziv"]);
     update_post_meta($post->ID, "mesto", $_POST["mesto"]);
-    update_post_meta($post->ID, "pocetak", $_POST["pocetak"]);
-    update_post_meta($post->ID, "zavrsetak", $_POST["zavrsetak"]);
+
+  $update_pocetak = strtotime( $_POST["pocetak"]);
+    update_post_meta($post->ID, "pocetak", $update_pocetak);
+  $update_zavrsetak= strtotime( $_POST["zavrsetak"]);
+    update_post_meta($post->ID, "zavrsetak", $update_zavrsetak);
     update_post_meta($post->ID, "broj_telefona", $_POST["broj_telefona"]);
     update_post_meta($post->ID, "fax", $_POST["fax"]);
     update_post_meta($post->ID, "mejl", $_POST["mejl"]);
@@ -100,7 +119,7 @@ function event_manager_edit_columns($columns) {
   $columns = array(
     "cb" => "<input type=\"checkbox\"/>",
     "title" => "Dešavanja",
-    "naziv" => "Dogadjaj",
+    "naziv" => "Događaj",
     "mesto" => "Mesto",
     "pocetak" => "Početak",
     "zavrsetak" => "Zavrsetak",
@@ -118,11 +137,11 @@ add_action("manage_event_posts_custom_column", "event_manager_custom_columns");
 
 function event_manager_custom_columns($column) {
   global $post;
-  $custom = get_post_custom();
+  $dogadjaji = get_post_custom();
   switch ($column)
   {
     case "naziv":
-         echo $custom["naziv"][0];
+         echo $dogadjaji["naziv"][0];
          break;
 
     case "description":
@@ -130,19 +149,31 @@ function event_manager_custom_columns($column) {
          break;
     
     case "mesto":
-         echo $custom["mesto"][0];
+         echo $dogadjaji["mesto"][0];
+         break;
+
+    case "pocetak":
+          $startd = $dogadjaji["pocetak"][0];
+          $endd = $dogadjaji["zavrsetak"][0];
+          $startdate = date(get_option('date_format'), $startd);
+          $enddate = date(get_option('date_format'), $endd);
+          echo $startdate . '<br /><em>' . $enddate . '</em>';
+         break;
+ 
+     case "zavrsetak":
+         echo $dogadjaji["zavrsetak"][0];
          break;
   
     case "broj_telefona":
-         echo $custom["broj_telefona"][0];
+         echo $dogadjaji["broj_telefona"][0];
          break;
   
     case "fax":
-         echo $custom["fax"][0];
+         echo $dogadjaji["fax"][0];
          break;
 
     case "mejl":
-         echo $custom["mejl"][0];
+         echo $dogadjaji["mejl"][0];
          break;
 
      case "cat":

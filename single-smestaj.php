@@ -7,21 +7,16 @@
               $broj_soba = $custom["broj_soba"][0];
              ?>
  
-         <div id="wrap" class="container" role="document">
-          <div id="content" class="row">
-           <div id="smestaj" class="<?php echo roots_main_class(); ?> span12" role="main">
- 
- 
-            <div class="smestaj_group row">
-             <div class="info span12">
+           <div id="smesta" class="<?php echo roots_main_class(); ?>" role="main">
+            <div id="smestaj" class="smestaj_group row">
               <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                 <div class="row">
-                 <div class="span6 effect1">
+                 <div class="thumbnail span4">
                     <?php echo get_the_post_thumbnail($page->ID, 'large'); ?>
                  </div>
- 
-                    <dl class="dl-horizontal span6">                                                                           
-                       <dt>Domaćin</dt>
+
+                 <div class="span5">
+                    <dl class="dl-horizontal">                                                                           
+                       <dt>Vlasnik</dt>
                        <dd><?php print $domacinstvo ?></dd>
                        <dt>Mesto</dt>
                        <dd><?php print $mesto ?></dd>
@@ -29,26 +24,16 @@
                        <dd><?php print $broj_telefona?></dd>
                        <dt>Broj soba</dt>
                        <dd><?php print $broj_soba ?></dd>
- 
                     </dl>
-                 </div> 
-                 <div class="row">
-          <div class="span12">
-              <p>
-		<?php if (have_posts()) : ?>
-		<?php while (have_posts()) : the_post(); ?>
-		<?php the_content(); ?>
-		<?php endwhile; ?>
-		<?php endif; ?>
-              </p>
+                 </div>
  
-                 </div> 
- 
-                 </div> 
-             </div> 
-            </div>
- 
-           </div>
-          </div>
-         </div>
+                 <div class="span12">
+                    <p>
+                      <?php while (have_posts()) : the_post(); ?>
+                      <?php the_content(); ?>
+                      <?php endwhile; ?>
+                    </p>
+                 </div>
+              <?php echo get_template_part('templates/comments_fb'); ?>
+             </div>
 

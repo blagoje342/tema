@@ -1,34 +1,28 @@
 <?php 
  $args_novosti = array(
-	'cat' => 'Novosti',
-	'posts_per_page' => '6'); 
+	'showposts' => '5'); 
 
- query_posts($args_novosti);
+ $novosti_query = new wp_query($args_novosti);
 
+  if ($novosti_query->have_posts()) : ?>
 
-  if (!have_posts()) : ?>
-  <div class="alert alert-block fade in">
-    <a class="close" data-dismiss="alert">&times;</a>
-    <p><?php _e('Nema rezultata po traženom kriterijumu.', 'roots'); ?></p>
-  </div>
-  <?php get_search_form(); ?>
-<?php endif; ?>
+      <?php while ($novosti_query->have_posts()) : $novosti_query->the_post(); ?>
+           <span class='datum pull-right'>
+            <?php echo get_the_date('d.m.Y'); ?> 
+           </span>
+           <span class='vest'>
+            <a href="<?php the_permalink(); ?>"><?php the_title('<h4>','</h4>'); ?></a>
+               <?php the_excerpt(); ?>
+           </span>
+<hr/>
+     <?php endwhile; ?>
+      <?php else: ?>
+        <div class="alert alert-block fade in">
+          <a class="close" data-dismiss="alert">&times;</a>
+          <p><?php _e('Nema rezultata po traženom kriterijumu.', 'roots'); ?></p>
+        </div>
+      <?php endif; 
 
-<?php while (have_posts()) : the_post(); ?>
-  <article id="post-<?php the_ID(); ?> naslovne_vesti" <?php post_class(); ?>>
-    <header id="novosti_naslov" class="alignleft">
-	<span class='datum'>
-      <?php echo get_the_date('d.m.Y'); ?> - 
-	</span>
-      <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-    </header>
-   </br>
-   <p><?php the_excerpt(); ?></p>
-   <footer>
-      <?php the_tags('<ul class="entry-tags"><li>','</li><li>','</li></ul>'); ?>
-    </footer>
-  </article>
-<?php endwhile; 
-// Reset query
-wp_reset_query();
-?>
+        // Reset query
+        wp_reset_query();
+  ?>

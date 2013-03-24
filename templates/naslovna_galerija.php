@@ -5,7 +5,7 @@
 
  query_posts($args_galerija); ?>
 
-<div id="galerija" >
+<div class="galerija" >
 	   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 <span class="gallery_group span3 effect6">
 	       <a href="<?php the_permalink(); ?>"><?php echo get_the_post_thumbnail($page->ID); ?>

@@ -1,16 +1,23 @@
+@import url("naslovna.css");
 @import url("shadows.css");
 @import url("pozadina.css");
 @import url("galerija.css");
+@import url("teme.css");
+@import url("social_widgets.css");
 
 /* ==========================================================================
    Base
    ========================================================================== */
 
 body {
- background: #fff;
- background-image:url('/wordpress/wp-content/themes/dozivi_jug/assets/img/H4.png');
+ /*background-image:url('/wordpress/wp-content/themes/dozivi_jug/assets/img/H7.png');
  background-repeat: repeat-x;
  height: 100%;
+ bottom: 0;
+*/
+
+
+
 }
 
 
@@ -21,7 +28,7 @@ body {
 
 #banner { }
 /* Fixed Topbar Navigation */
-body.top-navbar { padding-top: 60px; }
+body.top-navbar { padding-top: 0; }
 body.admin-bar .navbar-fixed-top { top: 28px; }
 
 
@@ -42,8 +49,13 @@ body.admin-bar .navbar-fixed-top { top: 28px; }
 
 #main {
 
- }
 
+/*
+background-color: #fff;
+padding: 15px;
+margin-left: -20px;
+*/
+ }
 
 
 /* ==========================================================================
@@ -83,7 +95,7 @@ body.admin-bar .navbar-fixed-top { top: 28px; }
 .alignleft { float: left; }
 .alignright { float: right; }
 figure.alignnone { margin-left: 0; margin-right: 0; }
-
+.center-text { text-align: center; }
 
 
 /* ==========================================================================
@@ -97,34 +109,20 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
   }
 }
 
-/*
-.shadow, .tema {
-	-webkit-box-shadow: 6px 8px 6px -5px black;
-	   -moz-box-shadow: 6px 8px 6px -5px black;
-	        box-shadow: 6px 8px 6px -5px black;  
+@media (min-width: 940px) {
+    .mapa {
+     margin-left: 62px;
+    }
+
+
 }
-*/
-/* ==========================================================================
-   Potrebno za google maps  
-   ========================================================================== */
-
-#map_canvas img { 
-  max-width: none;
-}
-
-#map_canvas label { 
-  width: auto; display:inline; 
-}
-
-
-
 /* =========== podmeni ====================
           sva podešavanja podmenija
    ======================================== */
 
 #podmenu {
-background-color: rgba(242, 251, 251);
-background-color: rgba(0, 0, 0, 0.1);
+background-color:  rgba(242, 251, 251);
+background-color: rgba(0, 0, 0, 0.1);  
 padding: 3px 0 -6px;
   text-align: center;
   -webkit-border-radius: 3px; 
@@ -143,6 +141,7 @@ font-weight: 800;
 #podmenu .active a {
 color: white;
 background-color: #08C;
+
 }
 
 
@@ -159,15 +158,6 @@ background-color: #08C;
    Isprobavanje 
    ========================================================================== */
 
-.smestaj-manager-extras div {
-  margin: 10px;
-}
-
-.smestaj-manager-extras div label {
-  width: 100px;
-  float: left;
-}
-
 #jug_mapa {
 padding: 26px;
 }
@@ -175,52 +165,43 @@ padding: 26px;
 .verticalLine {
 border-left:thick solid #000;
 }
-.naziv_teme, .gallery_group {
- text-align: center;
-}
+
 .impressum {
 font: 1.1em;
 font-weight: 900;
 }
-
 
 #nav-main {
 font-size: 1.1em;
 font-weight: 700;
 }
 
-#novosti_naslovna {
- margin-top: 3em; 
-}
-
-#desavanje {
- margin-top: 3em;
-}
-#mapa h3 {
-text-align: center;
-
-}
-
-#desavanje h3, #novosti_naslovna h3 {
+.naziv_teme, .gallery_group, #desavanja_naslovna h3, #novosti_naslovna h3 {
 text-align: center;
 }
 
-#mapa {
-margin-top: 10px;
-}
 .datum {
 font-family: 'La Belle Aurore', cursive;
 color: #679a00;
 font-size: 1.4em;
+ margin-top: .7em;
 }
 
-#novosti_naslovna p {
- font-weight: 100;
- color: #555;
+#slike {
+margin-top: 2em;
 }
 
-#desavanje header a, #novosti_naslovna header a, #desavanje article div p a {
-font-weight: 600;
+.breadcrumb {
+ margin: -20px 0 20px 0;
+}
+
+
+.current_event .datum, .current_event .h5  {
+ font-weight: 800;
+}
+
+.prosli .datum {
+ color: gray; 
 }
 
 

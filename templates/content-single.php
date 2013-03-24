@@ -1,5 +1,4 @@
 
-
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
     <header>
@@ -13,7 +12,6 @@
       <?php wp_link_pages(array('before' => '<nav id="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>')); ?>
       <?php the_tags('<ul class="entry-tags"><li>','</li><li>','</li></ul>'); ?>
     </footer>
-    <?php comments_template('/templates/comments.php'); ?>
+      <?php get_template_part('templates/fb_comments'); ?>
   </article>
 <?php endwhile; ?>
-
