@@ -5,7 +5,6 @@
     <a class="close" data-dismiss="alert">&times;</a>
     <p><?php _e('Nema rezultata po traženom kriterijumu.', 'roots'); ?></p>
   </div>
-  <?php get_search_form(); ?>
 <?php endif; ?>
 
 <?php while (have_posts()) : the_post(); ?>
@@ -50,3 +49,4 @@
       </aside>
       <?php endif; ?>
  
+      <div>
