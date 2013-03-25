@@ -20,6 +20,7 @@
 
 <div id="kalendar_dogadjaja">
   <h2>Kalendar događaja</h2>
+  <br/>
 <?php while ($dogadjaji_query->have_posts()) : $dogadjaji_query->the_post();  ?>
 <?php $dogadjaji = get_post_custom($post->ID);
               $pocetak = $dogadjaji["pocetak"][0];

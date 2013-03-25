@@ -72,7 +72,7 @@ function event_manager_meta_options() {
 
 <script type="text/javascript">
   $(document).ready(function() {
-    $('#pocetak, #zavrsetak, #dp6' ).datepicker({ dateFormat: "dd.mm.yy", firstDay:1 });
+    $('#pocetak, #zavrsetak').datepicker({ dateFormat: "dd.mm.yy", firstDay:1 });
   });  
 </script>
 
@@ -121,8 +121,7 @@ function event_manager_edit_columns($columns) {
     "title" => "Dešavanja",
     "naziv" => "Događaj",
     "mesto" => "Mesto",
-    "pocetak" => "Početak",
-    "zavrsetak" => "Zavrsetak",
+    "pocetak" => "Termin",
     "description" => "Opis",
     "broj_telefona" => "Broj telefona",
     "fax" => "Fax",
@@ -145,7 +144,7 @@ function event_manager_custom_columns($column) {
          break;
 
     case "description":
-         the_content();
+         the_excerpt();
          break;
     
     case "mesto":
@@ -160,10 +159,6 @@ function event_manager_custom_columns($column) {
           echo $startdate . '<br /><em>' . $enddate . '</em>';
          break;
  
-     case "zavrsetak":
-         echo $dogadjaji["zavrsetak"][0];
-         break;
-  
     case "broj_telefona":
          echo $dogadjaji["broj_telefona"][0];
          break;
