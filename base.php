@@ -21,14 +21,11 @@
   ?>
 
     <div id="holder">
-           <div class="container">
-                          <?php get_template_part('templates/page', 'carousel'); ?>
-                          <?php get_template_part('templates/page', 'submenu'); ?>
-           </div>
-
            <div id="wrap" class="container" role="document">
               <div class="row"> 
-                  <span class="span12">
+                 <span class="span12">
+                           <?php get_template_part('templates/page', 'carousel'); ?>
+                          <?php get_template_part('templates/page', 'submenu'); ?>
                   <?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
                   </span>
                 <div id="main" class="<?php echo roots_main_class(); ?>" role="main">

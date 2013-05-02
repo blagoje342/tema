@@ -7,6 +7,7 @@ padding: 12px;
 .galerija {
  -webkit-transform: rotate(-2deg);
  -moz-transform: rotate(-2deg);
+ margin-bottom: 1.2em;
 }
 
 .galerija span:nth-of-type(even) {
