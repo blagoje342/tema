@@ -10,9 +10,7 @@ Template Name: Frontpage Template
      <?php get_template_part('templates/content', 'page'); ?>
    </div>
 
-   <div class="row">
       <?php get_template_part('templates/page', 'teme'); ?>
-   </div>
         <br/>
         <br/>
                             <hr/>

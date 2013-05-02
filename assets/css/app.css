@@ -204,4 +204,7 @@ margin-top: 2em;
  color: gray; 
 }
 
-
+#uvodna_rec {
+ font-family: Zapf, cursive;
+ font-style: oblique;
+}

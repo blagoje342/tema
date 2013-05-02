@@ -17,8 +17,11 @@
       <img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/carousel/slika3.jpg" >
     </div>  
     <div class="item">
-      <img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/carousel/slika4.jpg" >
+      <img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/carousel/slika9.jpg" >
     </div>  
+    <div class="item">
+      <img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/carousel/slika4.jpg" >
+    </div>
     <div class="item">
       <img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/carousel/slika5.jpg" >
     </div>   
@@ -31,7 +34,8 @@
     <div class="item">
       <img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/carousel/slika8.jpg" >
     </div>
-  <!--  Next and Previous controls below
+
+ <!--  Next and Previous controls below
         href values must reference the id for this carousel 
     <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
     <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a> -->
